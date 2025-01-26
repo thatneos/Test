@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.eyes {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.mouth {
+    position: absolute;
+    bottom: 50px;
+    width: 100px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 50%;
+    transition: transform 0.5s, border-radius 0.5s;
+}
+
+.mouth.smile {
+    transform: rotate(0deg);
+    border-radius: 50% 50% 0 0;
+}
+
+.mouth.sad {
+    transform: rotate(180deg);
+    border-radius: 0 0 50% 50%;
+}
